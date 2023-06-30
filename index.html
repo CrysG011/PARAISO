@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocheria_25_de_Mayo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <section class="menu__container">
+                <h1 class="menu__logo"><span><img src="assets/paraiso.png" alt="Logo"></span></h1>
+
+                <ul class="menu__links">
+                    <li class="menu__item">
+                        <a href="pages/historia.html" class="menu__link">Historia... </a>
+                    </li>
+                    <li class="menu__item  menu__item--show">
+                        <a href="#" class="menu__link">Servicios <img src="assets/arrow.svg" class="menu__arrow"></a>
+                        <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="#atencion" class="menu__link menu__link--inside">Atención Inmediata</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#salas" class="menu__link menu__link--inside">Salas Velatorias</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#tramites" class="menu__link menu__link--inside">Tramites Administrativos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item  menu__item--show">
+                        <a href="#" class="menu__link">Planes <img src="assets/arrow.svg" class="menu__arrow"></a>
+                        <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="#prepagos" class="menu__link menu__link--inside">Previsión y Prepagos</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Beneficio Adicional</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Todas las Mutuales
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item  menu__item--show">
+                        <a href="#" class="menu__link">Ambulancia <img src="assets/arrow.svg" class="menu__arrow"></a>
+                        <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Solicitar !</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Traslados</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Vehículos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item  menu__item--show">
+                        <a href="#" class="menu__link">Asesoramiento <img src="assets/arrow.svg"
+                                class="menu__arrow"></a>
+                        <ul class="menu__nesting">
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Cementerio</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Florería</a>
+                            </li>
+                            <li class="menu__inside">
+                                <a href="#" class="menu__link menu__link--inside">Creaciones/Reducciones</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Contacto </a>
+                    </li>
+
+                </ul>
+
+                <div class="menu__hamburguer">
+                    <img src="assets/menu.svg" class="menu__img">
+                </div>
+            </section>
+        </nav>
+    </header>
+    <section class="intro">
+        <div class="carrousel">
+            <div class="grande">
+                <img src="assets/portada1.png" loading="lazy" alt="Imagen 1" class="img">
+                <img src="assets/portada2.png" loading="lazy" alt="Imagen 2" class="img">
+            </div>
+        </div>
+    </section>
+    <section class="servicios" id="atencion">
+        <div class="servicios__text">
+            <h2 class="servicios__title">Atención Inmediata</h2>
+            <p><strong>Comuniquese con nosotros</strong> y nuestras unidades acudirán al lugar donde se encuentra.</p>
+            <p><strong>***Atención las 24 hs***</strong><br>Obtendrá una repuesta rápida a su pedido el cual
+                resolveremos inmediatamente e iniciaremos la prestación del servicio.</p>
+        </div>
+        <figure class="servicios__figure">
+            <img src="assets/atencion.png" class="servicios__img" data-animation="fade" alt="Atención-al-Cliente">
+        </figure>
+    </section>
+    <section class="servicios servicios--reverse" id="salas">
+        <div class="servicios__text">
+            <h2 class="servicios__title">Salas Velatorias</h2>
+            <p><strong>Tres Salas</strong> Con atención permanente</p>
+            <ul>
+                <li>Servicio ceremonial</li>
+                <li>Servicio recepción de condolencias</li>
+                <li>Sala de star</li>
+                <li>Wi-Fi</li>
+                <li>Asistencia social y emergencia médica</li>
+                <li>Arreglos florales</li>
+            </ul>
+        </div>
+        <figure class="servicios__figure">
+            <img src="assets/salas.jpg" class="servicios__img" data-animation="show" alt="Salas-Velatorias">
+        </figure>
+    </section>
+    <section class="servicios" id="tramites">
+        <div class="servicios__text">
+            <h2 class="servicios__title">Tramites Administrativos</h2>
+
+            <p><strong>Realizamos el trámite administrativo completo</strong>, traslado y dado el caso, posterior
+                entrega de las cenizas en el crematorio de su elección teniendo a disposición varias empresas que le
+                brindaran un servicio especial según las necesidades y expectativas que predominan actualmente.</p>
+        </div>
+        <figure class="servicios__figure">
+            <img src="assets/tramites.jpg" class="servicios__img" data-animation="up" alt="Tramites">
+        </figure>
+    </section>
+    <section class="planes" id="prepagos">
+        <h2 class="planes__titulo">Planes</h2>
+        <div class="planes__seleccion">
+            <button class="planes__boton" data-plan="individual">Individual</button>
+            <button class="planes__boton" data-plan="familiar">Familiar</button>
+        </div>
+        <div class="planes__contenedor" id="individual">
+            <div class="plan">
+              <h2 class="plan__titulo">Plan Joven</h2>
+              <ul class="plan__lista">
+                <li class="plan__item">$XXX</li>
+                <li class="plan__item">Vigencia</li>
+                <li class="plan__item">Ingreso</li>
+              </ul>
+              <button class="plan__boton">Incluye</button>
+            </div>
+            <div class="plan">
+              <h2 class="plan__titulo">Plan Intermedio</h2>
+              <ul class="plan__lista">
+                <li class="plan__item">$XXX</li>
+                <li class="plan__item">Vigencia</li>
+                <li class="plan__item">Ingreso</li>
+              </ul>
+              <button class="plan__boton">Incluye</button>
+            </div>
+            <div class="plan">
+              <h2 class="plan__titulo">Plata</h2>
+              <ul class="plan__lista">
+                <li class="plan__item">$XXX</li>
+                <li class="plan__item">Vigencia</li>
+                <li class="plan__item">Ingreso</li>
+              </ul>
+              <button class="plan__boton">Incluye</button>
+            </div>
+          </div>
+          
+        <div class="planes__contenedor" id="familiar">
+            <div class="plan">
+                <h2 class="plan__titulo">Plan A</h2>
+                <ul class="plan__lista">
+                  <li class="plan__item">$XXX</li>
+                  <li class="plan__item">Vigencia</li>
+                  <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton">Incluye</button>
+              </div>
+              <div class="plan">
+                <h2 class="plan__titulo">Plan B</h2>
+                <ul class="plan__lista">
+                  <li class="plan__item">$XXX</li>
+                  <li class="plan__item">Vigencia</li>
+                  <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton">Incluye</button>
+              </div>
+              <div class="plan">
+                <h2 class="plan__titulo">Platinum</h2>
+                <ul class="plan__lista">
+                  <li class="plan__item">$XXX</li>
+                  <li class="plan__item">Vigencia</li>
+                  <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton">Incluye</button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="js/app.js"></script>
+</body>
+
+</html>
