@@ -16,14 +16,21 @@
     <header class="header">
         <nav class="menu">
             <section class="menu__container">
-                <h1 class="menu__logo"><span><img src="assets/paraiso.png" alt="Logo"></span></h1>
+                <h1 class="menu__logo"><span><img src="assets/paraiso.png" alt="Logo"></span>
+                    <a href="#mapa">
+                        <img src="assets/location.svg" class="menu__mapa" title="Como LLEGAR" alt="ubicacion">
+                    </a>
+                </h1>
 
                 <ul class="menu__links">
                     <li class="menu__item">
                         <a href="pages/historia.html" class="menu__link">Historia... </a>
                     </li>
+                    <li class="menu__item">
+                        <a href="#ambulancia" class="menu__link">Ambulancia</a>
+                    </li>
                     <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link">Servicios <img src="assets/arrow.svg" class="menu__arrow"></a>
+                        <a href="#servicios" class="menu__link">Servicios <img src="assets/arrow.svg" class="menu__arrow"></a>
                         <ul class="menu__nesting">
                             <li class="menu__inside">
                                 <a href="#atencion" class="menu__link menu__link--inside">Atención Inmediata</a>
@@ -34,36 +41,15 @@
                             <li class="menu__inside">
                                 <a href="#tramites" class="menu__link menu__link--inside">Tramites Administrativos</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link">Planes <img src="assets/arrow.svg" class="menu__arrow"></a>
-                        <ul class="menu__nesting">
                             <li class="menu__inside">
-                                <a href="#prepagos" class="menu__link menu__link--inside">Previsión y Prepagos</a>
+                                <a href="#planes" class="menu__link menu__link--inside">Planes</a>
                             </li>
                             <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Beneficio Adicional</a>
-                            </li>
-                            <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Todas las Mutuales
+                                <a href="#vehiculos" class="menu__link menu__link--inside">Vehiculos/Traslados</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item  menu__item--show">
-                        <a href="#" class="menu__link">Ambulancia <img src="assets/arrow.svg" class="menu__arrow"></a>
-                        <ul class="menu__nesting">
-                            <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Solicitar !</a>
-                            </li>
-                            <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Traslados</a>
-                            </li>
-                            <li class="menu__inside">
-                                <a href="#" class="menu__link menu__link--inside">Vehículos</a>
-                            </li>
-                        </ul>
-                    </li>
+                
                     <li class="menu__item  menu__item--show">
                         <a href="#" class="menu__link">Asesoramiento <img src="assets/arrow.svg"
                                 class="menu__arrow"></a>
@@ -92,7 +78,7 @@
             </section>
         </nav>
     </header>
-    <section class="intro">
+    <section class="intro" id="inicio">
         <div class="carrousel">
             <div class="grande">
                 <img src="assets/portada1.png" loading="lazy" alt="Imagen 1" class="img">
@@ -140,71 +126,179 @@
             <img src="assets/tramites.jpg" class="servicios__img" data-animation="up" alt="Tramites">
         </figure>
     </section>
-    <section class="planes" id="prepagos">
+    <section class="planes" id="planes">
         <h2 class="planes__titulo">Planes</h2>
         <div class="planes__seleccion">
-            <button class="planes__boton" data-plan="individual">Individual</button>
-            <button class="planes__boton" data-plan="familiar">Familiar</button>
+            <button class="planes__boton individual" data-plan="individual" title="VER Planes Individuales">Individual</button>
+            <button class="planes__boton familiar" data-plan="familiar" title="VER Planes Familiares">Familiar</button>
         </div>
         <div class="planes__contenedor" id="individual">
             <div class="plan">
-              <h2 class="plan__titulo">Plan Joven</h2>
-              <ul class="plan__lista">
-                <li class="plan__item">$XXX</li>
-                <li class="plan__item">Vigencia</li>
-                <li class="plan__item">Ingreso</li>
-              </ul>
-              <button class="plan__boton">Incluye</button>
+                <h2 class="plan__titulo">Plan Joven</h2>
+                <ul class="plan__lista">
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton" id="incluye">Incluye</button>
+                <ul class="plan__desplegable">
+                    <li>Ataud Baulito</li>
+                    <li>Sala Velatoria</li>
+                    <li>Carroza Funebre</li>
+                    <li>Autos de acompañamiento</li>
+                    <li>Tramite en Registro Civil</li>
+                    <li>Pago de impuestos sellados</li>
+                    <li>Pases radiales en el interior</li>
+                    <li>Nicho público a 2 años</li>
+                    <li>Misa d cuerpo presente</li>
+                </ul>
             </div>
             <div class="plan">
-              <h2 class="plan__titulo">Plan Intermedio</h2>
-              <ul class="plan__lista">
-                <li class="plan__item">$XXX</li>
-                <li class="plan__item">Vigencia</li>
-                <li class="plan__item">Ingreso</li>
-              </ul>
-              <button class="plan__boton">Incluye</button>
+                <h2 class="plan__titulo">Plan Intermedio</h2>
+                <ul class="plan__lista">
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton">Incluye</button>
             </div>
             <div class="plan">
-              <h2 class="plan__titulo">Plata</h2>
-              <ul class="plan__lista">
-                <li class="plan__item">$XXX</li>
-                <li class="plan__item">Vigencia</li>
-                <li class="plan__item">Ingreso</li>
-              </ul>
-              <button class="plan__boton">Incluye</button>
+                <h2 class="plan__titulo">Plata</h2>
+                <ul class="plan__lista">
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
+                </ul>
+                <button class="plan__boton">Incluye</button>
             </div>
-          </div>
-          
+        </div>
+
         <div class="planes__contenedor" id="familiar">
             <div class="plan">
                 <h2 class="plan__titulo">Plan A</h2>
                 <ul class="plan__lista">
-                  <li class="plan__item">$XXX</li>
-                  <li class="plan__item">Vigencia</li>
-                  <li class="plan__item">Ingreso</li>
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
                 </ul>
                 <button class="plan__boton">Incluye</button>
-              </div>
-              <div class="plan">
+            </div>
+            <div class="plan">
                 <h2 class="plan__titulo">Plan B</h2>
                 <ul class="plan__lista">
-                  <li class="plan__item">$XXX</li>
-                  <li class="plan__item">Vigencia</li>
-                  <li class="plan__item">Ingreso</li>
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
                 </ul>
                 <button class="plan__boton">Incluye</button>
-              </div>
-              <div class="plan">
+            </div>
+            <div class="plan">
                 <h2 class="plan__titulo">Platinum</h2>
                 <ul class="plan__lista">
-                  <li class="plan__item">$XXX</li>
-                  <li class="plan__item">Vigencia</li>
-                  <li class="plan__item">Ingreso</li>
+                    <li class="plan__item">$XXX</li>
+                    <li class="plan__item">Vigencia</li>
+                    <li class="plan__item">Ingreso</li>
                 </ul>
                 <button class="plan__boton">Incluye</button>
-              </div>
             </div>
+        </div>
+        </div>
+    </section>
+    <section class="planes" id="beneficios">
+        <h2 class="planes__titulo">Beneficios Adicionales</h2>
+        <div class="planes__contenido">
+            <p class="planes__parrafo">
+                -- Un plan familiar ofrece numerosos beneficios
+                adicionales para usted y sus seres queridos.-- <br> Algunas ventajas clave que
+                ofrece nuestro plan familiar son:
+            </p>
+            <ul class="planes__lista">
+                <li class="planes__item">Asistencia completa las 24 horas del día, los 7 días de la semana.</li>
+                <li class="planes__item">Acceso a una amplia red de proveedores de servicios funerarios de
+                    confianza.</li>
+                <li class="planes__item">Descuentos exclusivos en servicios adicionales, como la adquisición de
+                    nichos o lápidas conmemorativas.</li>
+                <li class="planes__item">Tramitación de todos los documentos legales y requisitos administrativos
+                    necesarios.</li>
+                <li class="planes__item">Coordinación y organización de los servicios conmemorativos y ceremonias
+                    religiosas.</li>
+                <li class="planes__item">Apoyo emocional y asesoramiento profesional para usted y su familia en
+                    momentos difíciles.</li>
+                <li class="planes__item">Transporte especializado para el traslado del difunto y los familiares.
+                </li>
+                <li class="planes__item">Flexibilidad para personalizar el plan y adaptarlo a sus necesidades
+                    específicas.</li>
+            </ul>
+            <p class="planes__parrafo">
+                Nuestro objetivo es brindarle tranquilidad y apoyo durante estos momentos delicados. <br> Con el
+                plan familiar, podrá contar con una atención integral y servicios de calidad para garantizar un
+                homenaje digno y respetuoso a su ser querido.
+            </p>
+        </div>
+    </section>
+    <section class="planes" id="mutuales">
+        <h2 class="planes__titulo">Mutuales y Obras Sociales</h2>
+        <div class="planes__contenido">
+            <p class="planes__parrafo">
+                En nuestra empresa, trabajamos en conjunto con diversas mutuales y obras sociales para brindarte la
+                mejor cobertura y atención. Le explicamos brevemente las diferencias entre una mutual y
+                una obra social:
+            </p>
+            <ul class="planes__lista">
+                <li class="planes__item">
+                    <strong>Mutual </strong>es una entidad sin fines de lucro conformada por un grupo de
+                    personas o empresas que se asocian voluntariamente para brindarse ayuda mutua. Su objetivo principal
+                    es brindar servicios y beneficios a sus asociados, como asistencia médica, préstamos, subsidios y
+                    actividades sociales y recreativas.
+                </li>
+                <li class="planes__item">
+                    <strong>Obra Social </strong>es un sistema de salud que brinda cobertura médica y
+                    servicios relacionados a los trabajadores y sus familias. Está regulada por leyes y normativas
+                    específicas y suele ser obligatoria para los empleados en relación de dependencia. Ofrecen servicios
+                    médicos, programas de prevención, medicamentos y otras prestaciones
+                    relacionadas con la salud.
+                </li>
+            </ul>
+            <ul class="planes__iconos">
+                <li class="planes__icono">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/PAMI-Logo.svg/400px-PAMI-Logo.svg.png"
+                        alt="PAMI" loading="lazy">
+                </li>
+                <li class="planes__icono">
+                    <img src="https://www.elegimejor.com.ar/assets/img/obra-social/ioma/ioma-logo.webp" alt="IOMA"
+                        loading="lazy">
+                </li>
+
+            </ul>
+            <p class="planes__parrafo">
+                Mutuales y obras sociales con las que trabajamos. <br>Consulte la disponibilidad debido a que puede
+                variar
+                según su ubicación y situación particular.
+            </p>
+
+        </div>
+    </section>
+    <section class="ambulancia" id="ambulancia">
+        <div class="ambulancia__grid">
+            <img src="assets/ambu.jpg" alt="Ambulancia">
+            <p class="ambulancia__text">Como solicitar una ambulancia</p>
+        </div>
+    </section>
+    <section class="ubicacion">
+        <div class="ubicacion__contenido">
+            <h3>Ubicación</h3>
+            <ul>
+                <li>25 de Mayo - Buenos Aires</li>
+                <li>Dirección: Calle 10 N°123</li>
+                <li>Teléfono: +1 234 567 890</li>
+                <li>Email: info@example.com</li>
+            </ul>
+        </div>
+        <div class="ubicacion__mapa" id="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.7201087857497!2d-60.17539312563154!3d-35.43696287266707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95be6056285a5d93%3A0x5dacba89f5a1643a!2sCocher%C3%ADa%2025%20de%20Mayo%20y%20Cementerio%20P.%20Paraiso!5e0!3m2!1ses!2sar!4v1688344470304!5m2!1ses!2sar"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 

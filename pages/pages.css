@@ -11,12 +11,12 @@ html {
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 100%;
     line-height: 1.4em;
-    min-height: 300vh;
-    background-color: #5971a1f1;
+    min-height: 100vh;
+    background-color: #727db3;
     -webkit-hyphens: auto;
     hyphens: auto;
     font-smooth: always;
@@ -25,14 +25,16 @@ body {
 }
 
 .hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(123, 140, 174, 0.463), rgba(11, 43, 65, 0.589)), url('hero.png');
+    min-height: 100vh;
+    width: fit-content;
+    background-image: url('hero.png');
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     text-align: center;
     display: grid;
     grid-template-columns: 5% 1fr 5%;
+    word-wrap: normal;
 }
 
 @keyframes up {
@@ -50,42 +52,138 @@ body {
     grid-row: 1/-1;
     align-self: center;
     display: grid;
-    gap: 6rem;
+    gap: 2em;
     animation: up .8s ease-in;
 }
 
-@media screen and (max-width: 768px) {
-    .hero{
-        align-self: flex-start;
-    }
-    .hero__texts {
-        grid-column: 1/-1;
-        grid-row: auto;
-        text-align: center;
-    }
-}
-
 .hero__title {
-    font-size: 3rem;
-    color: #061026;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-size: 3.6rem;
+    font-weight: bolder;
+    color: #fff;
+    line-height: 3rem;
     text-align: center;
+    letter-spacing: .33rem;
+    border-radius: 1em;
 }
 
 .hero__paragraph {
-    line-height: 1.9;
-    font-size: 1.33rem;
-    color: #fff;
+    line-height: 1.7;
+    max-width: 90%;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    border-radius: 1em;
+    font-weight: bold;
+    z-index: 1;
+    text-align: right;
+}
+
+@media (min-width: 1100px) {
+    .hero__paragraph {
+        transform: translateY(11rem) translateX(9rem);
+    }
 }
 
 .hero__wave {
     grid-row: 1/-1;
     grid-column: 1/-1;
     align-self: self-end;
-    height: 15rem;
+    height: 17rem;
     width: 100%;
     opacity: .7;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        align-self: flex-start;
+    }
+
+    .hero__texts {
+        grid-column: 1/-1;
+        grid-row: auto;
+        text-align: center;
+        gap: 3rem;
+
+    }
+
+    .hero__title {
+        font-size: 2rem;
+
+    }
+
+    .hero__paragraph {
+        font-size: 1.5rem;
+    }
+
+    .hero__wave {
+        height: 3rem;
+    }
+}
+
+.contenido {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: inherit;
+    margin: 2rem;
+    min-height: 100vh;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background: linear-gradient(145deg, #f0f0f0b6, #8f8f8f);
+    box-shadow: 1.4rem 1.4rem 3rem #aaaaaae6,
+        -1.4rem -1.4rem 3rem #ffffffc7;
+}
+
+.contenido__title {
+    font-size: 2.7rem;
+    margin-top: 2rem;
+}
+
+.contenido__list {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    font-size: 1.2rem;
+    list-style: none;
+    line-height: 1.7;
+    padding: 2em;
+}
+
+.contenido__button {
+    font-family: inherit;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border-radius: .3em;
+    box-shadow: 1.25rem 1rem 2.5rem #373a4f,
+        -1.25rem -1.25rem 2.5rem rgba(46, 49, 67, 0.407);
+    width: fit-content;
+    margin: 1.25rem auto;
+    padding: .3rem 1.7rem;
+    font-size: 1.7rem;
+    position: relative;
+    overflow: hidden;
+    color: #01020c;
+}
+.contenido__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(145, 152, 186) 0%, transparent 100%);
+    background-size: 200% 100%;
+    /* Ajusta el tamaño del gradiente al doble del ancho del elemento */
+    background-position: -100% 0;
+    /* Inicia el gradiente completamente a la izquierda */
+    transition: background-position 1s;
+}
+
+.contenido__button:hover::after {
+    background-position: 100% 0;
+    /* Desplaza el gradiente completamente a la derecha al pasar el cursor sobre el elemento */
 }
