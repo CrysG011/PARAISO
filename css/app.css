@@ -226,7 +226,6 @@ body {
 .menu__link--inside {
   top: 3rem;
   font-size: 1.2rem;
-
 }
 
 .menu__link--inside:hover {
@@ -237,14 +236,14 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 .9375rem;
+  padding: 0 .9rem;
   cursor: pointer;
   display: none;
 }
 
 .menu__img {
   display: block;
-  max-width: 2.7rem;
+  max-width: 2.5rem;
   opacity: .9;
 }
 
@@ -252,7 +251,6 @@ body {
   .menu__hamburguer {
     display: flex;
   }
-
   .menu__item {
     --clip: 0;
     overflow: hidden;
@@ -266,8 +264,6 @@ body {
   .menu__item--show {
     background-color: var(--background);
   }
-
-
   .menu__links {
     position: fixed;
     max-width: 25rem;
@@ -288,7 +284,7 @@ body {
   }
 
   .menu__link {
-    padding: 1.5625rem 0;
+    padding: 1rem 0;
     padding-left: 1.875rem;
     height: auto;
   }
@@ -569,16 +565,16 @@ body {
 }
 
 .planes__contenedor {
-  min-width: 25rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(33.33% - 1rem), 1fr));
+  
+  display: flex;
+  width: 100%;
   gap: 1rem;
   display: none;
 }
 
 .plan {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   justify-content: center;
   padding: 1rem;
