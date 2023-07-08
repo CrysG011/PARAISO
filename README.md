@@ -1,2 +1,2 @@
 # PARAISO
-Tercer Proyecto (Freelance)
+Tercer Proyecto
