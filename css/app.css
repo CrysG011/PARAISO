@@ -1,7 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('fonts/RobotoSlab-Regular.ttf') format('truetype'),
+       url('fonts/RobotoSlab-ExtraBold.ttf') format('truetype');
+}
 
-
-/* Aquí definimos las Custom properties */
 :root {
   --negro: #393939;
   --blanco: #ececec;
@@ -9,7 +12,6 @@
   --sombra-sec: #ffffff;
   --borde-negro: #00000050;
   --marcado: rgb(127, 195, 255);
-  /* Tipografía */
   --tipo-principal: font-family: 'Roboto Slab', serif;
 
   --boton-border-radius: .3em;
@@ -140,17 +142,21 @@ body {
   background-color: rgba(220, 220, 220, 0.338);
   box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
 }
+
 .menu__mapa {
   animation: blink-animation 3s infinite;
- 
+
 }
+
 @keyframes blink-animation {
   0% {
     filter: brightness(1);
   }
+
   50% {
     filter: brightness(1.5);
   }
+
   100% {
     filter: brightness(1);
   }
@@ -251,6 +257,7 @@ body {
   .menu__hamburguer {
     display: flex;
   }
+
   .menu__item {
     --clip: 0;
     overflow: hidden;
@@ -264,6 +271,7 @@ body {
   .menu__item--show {
     background-color: var(--background);
   }
+
   .menu__links {
     position: fixed;
     max-width: 25rem;
@@ -390,7 +398,7 @@ body {
   padding: 3rem;
   max-height: 100vh;
   min-height: 100%;
-  width: 90%;
+  width: 100%;
   max-width: 75rem;
   margin: 0 auto;
   display: flex;
@@ -492,10 +500,12 @@ body {
     height: fit-content;
     order: 1;
   }
-  .servicios__title{
+
+  .servicios__title {
     font-size: 1.5rem;
   }
-  .servicios__text p{
+
+  .servicios__text p {
     font-size: 1rem;
     line-height: 1rem;
   }
@@ -545,7 +555,7 @@ body {
   overflow: var(--boton-overflow);
   color: var(--boton-color);
   margin: var(--boton-margin);
-  font-size: var(--boton-font-size);
+  font-size: 1.1rem;
   font-weight: var(--boton-font-weight);
   transition: var(--boton-transition);
   cursor: var(--boton-cursor);
@@ -565,8 +575,8 @@ body {
 }
 
 .planes__contenedor {
-  
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   gap: 1rem;
   display: none;
@@ -574,7 +584,7 @@ body {
 
 .plan {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: auto;
   align-items: center;
   justify-content: center;
   padding: 1rem;
@@ -602,75 +612,160 @@ body {
 .plan__desplegable {
   display: none;
 }
-.planes__contenido{
+
+.planes__contenido {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  margin: 1em;
+  padding: 1rem;
 }
-.planes__contenido p{
+
+.planes__parrafo {
   font-size: 1.1rem;
   line-height: 1.3rem;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  padding: 1rem;
+  width: 100%;
+  margin: .7rem;
 }
+
 .planes__iconos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
 }
+
 .planes__icono img {
   max-width: 7rem;
   height: auto;
   margin: 0 2rem;
 }
+
 .planes__lista {
   transition: all 0.4s ease;
   border-radius: 1em;
-  background: linear-gradient(145deg, #a2a6d691, #8f8f8f8b);
-  box-shadow: .4rem .4rem .6rem #bebebe85,
-    -.4rem -.4rem .3rem #71839ecd;
+  background: linear-gradient(145deg, #d7e4fcb5, #98b8f49c);
+  box-shadow: .2rem .2rem .3rem #a4bcea9f,
+    -.2rem -.2rem .3rem #6788c5d5;
   display: flex;
   flex-flow: column wrap;
   gap: .5rem;
   margin: .7rem;
-  font-size: 1.3rem;
   color: #01020c;
-  width: fit-content;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 1.3rem;
   font-weight: bold;
+  line-height: 1.3rem;
 }
+
 .planes__item {
   list-style-type: disc;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
-/* Estilos para el diseño responsive */
-@media (max-width: 919px) {
+@media (min-width: 700px) {
   .planes__contenedor {
-    
+   
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 300px));
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
   }
-  
-  .planes__boton, .plan__boton{
-    font-size: 1.1rem;
-    margin: auto;
-  }
+
 }
 
-
-.ambulancia{
+.vehiculos {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
+  text-align: center;
+  color: var(--negro);
   transition: all 0.4s ease;
   border-radius: 1em;
   background-color: var(--blanco);
   box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  margin: 1em;
 }
+
+.vehiculos__titulo {
+  font-size: 2rem;
+  padding: 1em;
+  line-height: 1.1;
+  height: fit-content;
+}
+
+.vehiculos__contenido {
+  display: grid;
+  grid-template-rows: auto;
+  align-self: center;
+  justify-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  padding: 1rem;
+}
+
+.vehiculos__fila1, .vehiculos__fila2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-self: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.vehiculos__lista, .vehiculos__texto {
+  text-align: center;
+  line-height: 1.3rem;
+  color: var(--negro);
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  margin: 1em;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .vehiculos__contenido {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vehiculos__fila {
+    gap: 1rem;
+  }
+}
+
+
+.ambulancia {
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+  box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  margin: 1em;
+}
+
 .ambulancia__grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   width: 60%;
-  margin: 80px auto;
+  margin: 5rem auto;
 }
 
 .ambulancia__grid:hover .ambulancia__text {
@@ -708,7 +803,7 @@ body {
   border-radius: 1em;
   background-color: var(--blanco);
   box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  
+
 }
 
 .ubicacion__contenido {
@@ -719,6 +814,7 @@ body {
   line-height: 1.9rem;
   text-align: center;
 }
+
 .ubicacion__mapa {
   grid-row: 2;
   border-radius: 1em;
@@ -738,9 +834,11 @@ body {
     background-image: url('/assets/cocheria.png');
     background-size: cover;
   }
-  .ubicacion__contenido ul{
+
+  .ubicacion__contenido ul {
     margin-top: 25%;
   }
+
   .ubicacion__mapa {
     grid-column: 2;
     grid-row: 1;

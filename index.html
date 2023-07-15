@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocheria_25_de_Mayo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 
 </head>
@@ -24,13 +21,17 @@
 
                 <ul class="menu__links">
                     <li class="menu__item">
-                        <a href="pages/historia.html" class="menu__link">Historia... </a>
+                        <a href="pages/historia.html" class="menu__link" title="Sobre Nosotros">Historia... </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="homenaje/homenaje.html" class="menu__link" title="Condolencias">Homenajes</a>
                     </li>
                     <li class="menu__item">
                         <a href="#ambulancia" class="menu__link">Ambulancia</a>
                     </li>
                     <li class="menu__item  menu__item--show">
-                        <a href="#servicios" class="menu__link">Servicios <img src="assets/arrow.svg" class="menu__arrow"></a>
+                        <a href="#servicios" class="menu__link">Servicios <img src="assets/arrow.svg"
+                                class="menu__arrow"></a>
                         <ul class="menu__nesting">
                             <li class="menu__inside">
                                 <a href="#atencion" class="menu__link menu__link--inside">Atención Inmediata</a>
@@ -49,7 +50,7 @@
                             </li>
                         </ul>
                     </li>
-                
+
                     <li class="menu__item  menu__item--show">
                         <a href="#" class="menu__link">Asesoramiento <img src="assets/arrow.svg"
                                 class="menu__arrow"></a>
@@ -129,7 +130,8 @@
     <section class="planes" id="planes">
         <h2 class="planes__titulo">Planes</h2>
         <div class="planes__seleccion">
-            <button class="planes__boton individual" data-plan="individual" title="VER Planes Individuales">Individual</button>
+            <button class="planes__boton individual" data-plan="individual"
+                title="VER Planes Individuales">Individual</button>
             <button class="planes__boton familiar" data-plan="familiar" title="VER Planes Familiares">Familiar</button>
         </div>
         <div class="planes__contenedor" id="individual">
@@ -276,6 +278,29 @@
                 según su ubicación y situación particular.
             </p>
 
+        </div>
+    </section>
+    <section class="vehiculos" id="vehiculos">
+        <div class="vehiculos__titulo">
+            <h2>Vehículos</h2>
+        </div>
+        <div class="vehiculos__contenido">
+            <div class="vehiculos__fila1">
+                <h3>Flota Automotriz</h3>
+                <ul class="vehiculos__lista">
+                    <li>Unidad de traslado de fallecidos</li>
+                    <li>Fúnebre y Porta coronas de alta gama</li>
+                    <li>Autos de acompañamiento</li>
+                    <li>Minibús para traslados</li>
+                    <li>Furgón para traslados de ataúdes</li>
+                </ul>
+            </div>
+            <div class="vehiculos__fila2">
+                <h3>Traslados</h3>
+                <p class="vehiculos__texto">
+                    Se realizan traslados al interior del país. Los mismos pueden gestionarse.
+                </p>
+            </div>
         </div>
     </section>
     <section class="ambulancia" id="ambulancia">
