@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homenajes</title>
-    <link rel="stylesheet" href="homenaje.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homenajes</title>
+  <link rel="stylesheet" href="homenaje.css">
 </head>
+
 <body>
-    
+  <header>
+    <nav class="main">
+      <img src="../assets/paraiso.png" alt="logo">
+      <ul class="main__ul">
+        <li class="main__li">Buscar</li>
+        <li class="main__li">Publicar</li>
+      </ul>
+      <button class="main__btn">VOLVER</button>
+    </nav>
+
+  </header>
+  <section class="homenajes">
+    <h2 class="homenajes__titulo">Homenajes</h2>
+    <div class="homenajes__grid">
+      <!-- Aquí se mostrarán los homenajes de forma dinámica desde la base de datos o archivo -->
+      <!-- Puedes utilizar un lenguaje de programación como PHP para generar esta parte dinámica -->
+      <!-- Por ahora, colocaremos algunos homenajes de ejemplo -->
+      <div class="homenajes__item">
+        <h3 class="homenajes__nombre">Persona 1</h3>
+        <p class="homenajes__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec nulla vel
+          sapien maximus blandit eu vel est.</p>
+        <img src="imagen1.jpg" alt="Homenaje 1" class="homenajes__imagen">
+      </div>
+      <div class="homenajes__item">
+        <h3 class="homenajes__nombre">Persona 2</h3>
+        <p class="homenajes__descripcion">Nullam commodo, arcu vel vestibulum facilisis, dolor magna sagittis magna, et
+          gravida urna metus non dui.</p>
+        <img src="imagen2.jpg" alt="Homenaje 2" class="homenajes__imagen">
+      </div>
+      <!-- Puedes agregar más homenajes aquí -->
+    </div>
+  </section>
+
 </body>
+
 </html>
