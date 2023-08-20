@@ -49,12 +49,11 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style-type: none;
-}
-
 html {
   scroll-behavior: smooth;
+}
+li {
+  list-style-type: none;
 }
 
 h1,
@@ -91,7 +90,6 @@ body {
   font-family: var(--tipo-principal);
   font-size: 100%;
   line-height: 1rem;
-  min-height: 100vh;
   width: 100%;
   background-color: var(--blanco);
   color: var(--negro);
@@ -100,7 +98,6 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 .header {
@@ -127,8 +124,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: inherit;
-  height: fit-content;
+  max-height: 10vh;
   margin: 0;
   top: 0;
 }
@@ -137,14 +133,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  background-color: #c9c9c9;
   background: linear-gradient(to right, #c9c9c9, #564f4fac);
   border-radius: 1em;
   top: 0;
-  transform: translateY(-.7rem);
+  padding: .1rem;
+  max-height: 10vh;
+  /*transform: translateY(-.7rem);*/
 }
 .menu__logo img{
-  max-height: 2.9rem;
+  max-height: 2.7rem;
   transition: all 0.4s ease;
 }
 .menu__logo span{
@@ -246,12 +243,10 @@ body {
 }
 
 .menu__hamburguer {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  height: inherit;
+  display: none;
   padding: 0 .9rem;
   cursor: pointer;
-  display: none;
 }
 
 .menu__img {
@@ -536,6 +531,7 @@ body {
   box-shadow: .5em .5em 1em var(--sombra-ppal), -.5em -.5em 1em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
   margin: 1rem;
   padding: .7rem;
+  width: 100vw;
 }
 
 .planes__titulo {
