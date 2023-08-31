@@ -6,35 +6,26 @@
   const addClick = () => {
     listElements.forEach(element => {
       element.addEventListener('click', () => {
-
-
         let subMenu = element.children[1];
         let height = 0;
         element.classList.toggle('menu__item--active');
 
-
         if (subMenu.clientHeight === 0) {
           height = subMenu.scrollHeight;
         }
-
         subMenu.style.height = `${height}px`;
-
       });
     });
   }
 
   const deleteStyleHeight = () => {
     listElements.forEach(element => {
-
       if (element.children[1].getAttribute('style')) {
         element.children[1].removeAttribute('style');
         element.classList.remove('menu__item--active');
       }
-
     });
   }
-
-
   window.addEventListener('resize', () => {
     if (window.innerWidth > 919) {
       deleteStyleHeight();
@@ -49,17 +40,14 @@
   if (window.innerWidth <= 919) {
     addClick();
   }
+  menu.addEventListener('click', () => list.classList.toggle ('menu__links--show'));
 
-  menu.addEventListener('click', () => list.classList.toggle('menu__links--show'));
-
-})();
-
+}) ();
 
 window.addEventListener('load', function () {
   const grande = document.querySelector('.grande');
   const imgWidth = document.querySelector('.img').offsetWidth;
   let desplazamiento = 0;
-
   function desplazarCarrusel() {
     desplazamiento -= imgWidth;
     grande.style.transform = `translateX(${desplazamiento}px)`;
