@@ -1,8 +1,7 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Roboto Slab';
-  src: url('fonts/RobotoSlab-Regular.ttf') format('truetype'),
-       url('fonts/RobotoSlab-ExtraBold.ttf') format('truetype');
+  src: url('../fonts/RobotoSlab-Regular.ttf') format('truetype'),
+       url('../fonts/RobotoSlab-ExtraBold.ttf') format('truetype');
 }
 
 :root {
@@ -31,7 +30,6 @@
   --boton-gradient-end: transparent;
 }
 
-/* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --negro: #ececec;
